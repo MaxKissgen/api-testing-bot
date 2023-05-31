@@ -177,7 +177,7 @@ public class CodexTestGen {
         String input = code.split("\\[insert]")[0];
         String suffix = code.split("\\[insert]")[1];
 
-        System.out.println("--------------\n" + "Input: " +input + "\n--------------\n");
+        System.out.println("--------------\n" + "Prompt: " + openAISystemPrompt +  "\nInput: " +input + "\n--------------\n");
         // call OpenAI API
         JSONArray choices = new CodexAPI(codexAPIToken,openAIModel,openAISystemPrompt).insert(input, stop);
 
